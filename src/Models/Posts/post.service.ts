@@ -12,6 +12,11 @@ export class PostService {
   constructor(readonly prisma: PrismaService) {}
 
   async create(data: CreatePost): Promise<CreatePost> {
+    for (let i = 0; i < 150; i++) {
+      await this.prisma.post.create({
+        data,
+      });
+    }
     const post = await this.prisma.post.create({
       data,
     });
