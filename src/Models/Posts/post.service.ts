@@ -33,6 +33,8 @@ export class PostService {
     }
     await this.prisma.post.createMany({ data: _data });
 
+    this.prisma.$disconnect();
+
     return 'ok';
   }
 }
