@@ -13,8 +13,6 @@ export class PostService {
   constructor(readonly prisma: PrismaService) {}
 
   async create(data: CreatePost) {
-    const prisma_create = new PrismaClietEntity('ya');
-
     const _data = [];
 
     for (let i = 0; i < 12000; i++) {
@@ -33,7 +31,7 @@ export class PostService {
         k: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
       });
     }
-    await prisma_create.post.createMany({ data: _data });
+    await this.prisma.post.createMany({ data: _data });
 
     return 'ok';
   }
