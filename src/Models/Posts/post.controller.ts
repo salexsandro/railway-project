@@ -6,7 +6,7 @@ export class PostController {
   constructor(private readonly postService: PostService) {}
 
   @Post('create')
-  create(@Body() data: CreatePost): Promise<CreatePost> {
+  create(@Body() data: CreatePost) {
     return this.postService.create(data);
   }
 }

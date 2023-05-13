@@ -12,31 +12,29 @@ export interface CreatePost {
 export class PostService {
   constructor(readonly prisma: PrismaService) {}
 
-  async create(data: CreatePost): Promise<CreatePost> {
+  async create(data: CreatePost) {
     const prisma_create = new PrismaClietEntity('ya');
 
-    for (let i = 0; i < 300; i++) {
-      await prisma_create.post.create({
-        data: {
-          ...data,
-          a: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          b: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          c: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          d: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          e: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          f: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          g: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          h: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          i: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          j: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-          k: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
-        },
+    const _data = [];
+
+    for (let i = 0; i < 12000; i++) {
+      _data.push({
+        ...data,
+        a: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        b: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        c: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        d: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        e: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        f: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        g: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        h: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        i: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        j: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        k: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
       });
     }
-    const post = await prisma_create.post.create({
-      data,
-    });
+    await prisma_create.post.createMany({ data: _data });
 
-    return post;
+    return 'ok';
   }
 }
