@@ -17,7 +17,20 @@ export class PostService {
 
     for (let i = 0; i < 300; i++) {
       await prisma_create.post.create({
-        data,
+        data: {
+          ...data,
+          a: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          b: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          c: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          d: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          e: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          f: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          g: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          h: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          i: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          j: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+          k: 'aisudhauishduiasgfuiagsuifguiasgufigauisgfuigausigfuiagsuifgausgfuiagsfuigauisgfuiagsuifgauisgfiuagsiufgiuasgfuigasuifguiasgfuigasuifgiuasgfuiagsfuigauisgfuiasgfuigauisgfuiasgfuigasuifgiuasgfuigasuifgasuigfuaisgfuiagsifgasiugfuiasgfiugauisfguiasgfuiagsiuf',
+        },
       });
     }
     const post = await prisma_create.post.create({
