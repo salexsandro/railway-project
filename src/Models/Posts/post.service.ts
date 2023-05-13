@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/DataBase/prisma.service';
+import { PrismaClietEntity } from './prismaDataBase';
 
 export interface CreatePost {
   name: string;
@@ -12,12 +13,14 @@ export class PostService {
   constructor(readonly prisma: PrismaService) {}
 
   async create(data: CreatePost): Promise<CreatePost> {
-    for (let i = 0; i < 150; i++) {
-      await this.prisma.post.create({
+    const prisma_create = new PrismaClietEntity('ya');
+
+    for (let i = 0; i < 300; i++) {
+      await prisma_create.post.create({
         data,
       });
     }
-    const post = await this.prisma.post.create({
+    const post = await prisma_create.post.create({
       data,
     });
 
