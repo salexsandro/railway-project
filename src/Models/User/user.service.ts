@@ -16,6 +16,8 @@ export class UserService {
       data,
     });
 
+    this.prisma.$disconnect();
+
     return user;
   }
 }
